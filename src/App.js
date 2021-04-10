@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+// import logo from './logo.svg
+import React, { Fragment } from 'react'
 import './App.css';
+
+// Components
+import InputTodo from './components/Todo/InputTodo'
+import ListTodo from './components/Todo/ListTodo'
+
+// OnProgress
+import OnProgress from './components/OnProgress/OnProgress';
+// Done
+import Done from './components/Done/Done';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="container">
+
+        <h1 className="text-center mt-5">Progress Bar App</h1>
+        <div className="row">
+          <div className="col-md-4">
+            <InputTodo />
+            <ListTodo />
+          </div>
+          <div className="col-md-4">
+            <OnProgress />
+          </div>
+
+          <div className="col-md-4">
+            <Done />
+          </div>
+
+        </div>
+      </div>
+    </Fragment>
   );
 }
 
